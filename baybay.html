@@ -20,17 +20,17 @@
             background-size: 100% 100%;
             background-attachment: fixed;
 
-	    scrollbar-width: thin; /* For Firefox */
+	        scrollbar-width: thin; /* For Firefox */
     	    -ms-overflow-style: none; /* For IE and Edge */
         }
 
-	body::-webkit-scrollbar {
-    	    width: 0rem; /* Adjust the width as needed */
-	}
+        body::-webkit-scrollbar {
+            width: 0rem; /* scrollbar -broken */
+        }
 
-	body::-webkit-scrollbar-thumb {
-            background-color: #888; /* Adjust the color as needed */
-	}
+        body::-webkit-scrollbar-thumb {
+            background-color: #88888800; /* scrollbar color -broken */
+        }
 
         header {
             color: #fff;
@@ -169,12 +169,11 @@
         }
     </style>
       
-      <script>
-	document.oncontextmenu = () => {
-		alert("The codes are simple enough to be hidden :)")
-		return false
-	}
-
+    <script>
+        document.oncontextmenu = () => {
+            alert("The codes are simple enough to be hidden :)")
+            return false
+        }
 
         document.onkeydown = e => {
             // Prevent F12 key
@@ -221,8 +220,17 @@
                 <th>Download</th>
                 <th>Description</th>
             </tr>
-
-	   <tr>
+            
+            <!-- Latest = downloadButton | Second =  secondButton
+            Adding new latest button:
+            
+            <tr>
+                <td><button id="downloadButton"><a href=" link here " target="_blank">V0000-0</a></button></td>
+                <td>The latest version. Game Match fixes and new app icon.</td>
+            </tr>
+            
+            -->
+	        <tr>
                 <td><button id="downloadButton"><a href="https://drive.google.com/drive/folders/1-28Nb648h2BkP1ANrkQGpdhkex6w8rzV?usp=sharing" target="_blank">V1126.1</a></button></td>
                 <td>The latest version. Game Match fixes and new app icon.</td>
             </tr>
