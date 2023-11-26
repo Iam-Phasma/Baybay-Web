@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Meta tags for preventing caching -->
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>Baybay</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to top right, #4358cf, #c650c0);
+            background-size: 100% 100%;
+            background-attachment: fixed;
+
+	    scrollbar-width: thin; /* For Firefox */
+    	    -ms-overflow-style: none; /* For IE and Edge */
+        }
+
+	body::-webkit-scrollbar {
+    	    width: 0rem; /* Adjust the width as needed */
+	}
+
+	body::-webkit-scrollbar-thumb {
+            background-color: #888; /* Adjust the color as needed */
+	}
+
+        header {
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        section {
+            text-align: center;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #board {
+            background-color: #fff;
+            padding: 7px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+            margin-bottom: 20px;
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow-x: auto;
+            min-width: 300px;
+        }
+
+        #board:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+            width: 100px;
+            text-align: center;
+        }
+
+        #downloadButton > a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #downloadButton {
+            background-color: #526cff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+      
+      	#secondButton > a{
+            text-decoration: none;
+            color: #fff;
+        }
+
+        #secondButton {
+            background-color: #36304a;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button:hover {
+            background-color: #333;
+            transform: scale(1.05);
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 350px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 300px) {
+            .button-container {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 0px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+            color: #5d5d5d;
+        }
+
+        th {
+            background-color: #36304a;
+            color: white;
+            padding: 15px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #f5f5f5;
+        }
+
+        h1, h4, p {
+            padding: 7px;
+            border-radius: 10px;
+            transition: box-shadow 0.3s;
+            margin-bottom: 20px;
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+            overflow-x: auto;
+            min-width: 300px;
+            color: white;
+        }
+
+        h4 {
+            text-align: left;
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.5; 
+        }
+    </style>
+      
+      <script>
+	document.oncontextmenu = () => {
+		alert("The codes are simple enough to be hidden :)")
+		return false
+	}
+
+
+        document.onkeydown = e => {
+            // Prevent F12 key
+            if (e.key == "F12") {
+                alert("The codes are simple enough to be hidden :)");
+                return false;
+            }
+
+            // Prevent showing page source by ctrl U
+            if (e.ctrlKey && e.key == "u") {
+                alert("The codes are simple enough to be hidden :)");
+                return false;
+            }
+
+            // Prevent copying from the page
+            if (e.ctrlKey && e.key == "c") {
+                alert("Hello, there's nothing to copy here :)");
+                return false;
+            }
+
+            // Prevent pasting on the page
+            if (e.ctrlKey && e.key == "v") {
+                alert("Hello, there's no where you can paste it here :)");
+                return false;
+            }
+        }
+    </script>
+      
+</head>
+<body>
+
+<header>
+    <h2>Baybay: An Android Based Baybayin Learning Application</h2>
+
+<br>
+<p>Explore our latest updates and downloads below. To ensure you're viewing the most recent content, consider refreshing the webpage using the provided instructions. Happy learning with Baybay! </p>
+
+</header>
+
+<section>
+    <div id="board">
+        <table>
+            <tr>
+                <th>Download</th>
+                <th>Description</th>
+            </tr>
+
+	   <tr>
+                <td><button id="downloadButton"><a href="https://drive.google.com/drive/folders/1-28Nb648h2BkP1ANrkQGpdhkex6w8rzV?usp=sharing" target="_blank">V1126.1</a></button></td>
+                <td>The latest version. Game Match fixes and new app icon.</td>
+            </tr>
+
+            <tr>
+                <td><button id="secondButton"><a href="https://drive.google.com/drive/folders/1dPh6FuG6PdBqy0_5ewsBX2ElANpn1DnU?usp=sharing" target="_blank">V1124.1</a></button></td>
+                <td>Added new content in Lesson-Rules.</td>
+            </tr>
+
+            <tr>
+                <td><button id="secondButton"><a href="https://drive.google.com/drive/folders/1hEngoyXOH80cBEHl5YPVBM0zxl4JnC5O?usp=sharing" target="_blank">V1123.1</button></td>
+                <td>Added toast pop-up cancel event.</td>
+            </tr>
+
+            <tr>
+                <td><button id="secondButton">V0000.0</button></td>
+                <td>Dummy Button</td>
+            </tr>
+          
+        </table>
+    </div>
+</section>
+
+<br><br><br>
+<h4>⬇️ Before you download</h4>
+
+<p>To make sure you are viewing the updated content, do any of the following; this will force refresh the webpage:
+
+    <br><br>
+    
+🅰️ If you are on a computer, press ctrl-F5 or shift-F5.
+    <br><br>
+🅱️ If you are on a phone and this webpage did not open in your main browser, click the 3-dot menu at the top > click "open in [browser]") > click the 'refresh' button at the top right corner of your browser.
+<br><br>
+❗If this is not the first time you visit this site using your phone, just do the second (B) instruction.
+</p>
+<br><br>
+
+  <h4>🤖 For testing only</h4>
+  
+    <p>[Get Debug Trophies] To get 40 trophies without playing games, navigate to "More" section, scroll to the bottom and long press the *yellow button, wait for 5 seconds until a toast pop-up to confirm the action. 
+    <br><br>
+    Kind regards, Baybay Team :)</p>
+<br><br>
+</body>
+</html>
+
