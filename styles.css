@@ -154,3 +154,34 @@ p {
     line-height: 1.5; 
 }
 
+
+@keyframes glow {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px 5px rgb(225, 148, 255), 0 0 10px 10px #d478ff;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1); /* Adjust the scale to change the size of the glow */
+        box-shadow: 0 0 20px 20px #b78aff, 0 0 40px 40px #875cff;
+        opacity: 0; /* Adjust the opacity to control the visibility of the glow */
+    }
+}
+
+#mouse-trail {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.mouse-fall {
+    animation: fallAnimation 3s linear;
+}
+
+.mouse-glow {
+    animation: glow 0.5s linear;
+    transform-origin: center bottom;
+}
+
+
+
