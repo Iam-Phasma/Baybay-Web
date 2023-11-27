@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(scramble);
             clearInterval(reveal);
         }
-    }, 200);
+    }, 400);
 });
 
 
