@@ -169,7 +169,7 @@ p {
 }
 
 #mouse-trail {
-    position: fixed;
+    position: absolute;
     pointer-events: none;
     z-index: 9999;
 }
