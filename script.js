@@ -55,6 +55,29 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+//For ALPHA animation
+document.addEventListener("DOMContentLoaded", function () {
+    const alphaAnimation = document.getElementById("alphaAnimation");
+    const word = "ALPHA";
+    let counter = 0;
+    let scramble = setInterval(() => {
+        let randomText = Math.random().toString(36).substring(7).toUpperCase();
+        alphaAnimation.textContent = word.substring(0, counter) + randomText.substring(0, word.length - counter);
+    }, 50);
+
+    let reveal = setInterval(() => {
+        if (counter < word.length) {
+            counter++;
+        } else {
+            clearInterval(scramble);
+            clearInterval(reveal);
+        }
+    }, 200);
+});
+
+
+  
+
 
 
 
