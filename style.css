@@ -1,0 +1,155 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top right, #4358cf, #c650c0);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+
+    scrollbar-width: thin; /* For Firefox */
+    -ms-overflow-style: none; /* For IE and Edge */
+}
+
+body::-webkit-scrollbar {
+    width: 0rem; /* scrollbar -broken */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #88888800; /* scrollbar color -broken */
+}
+
+header {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+}
+
+section {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#board {
+    background-color: #fff;
+    padding: 7px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow-x: auto;
+    min-width: 300px;
+}
+
+#board:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100px;
+    text-align: center;
+}
+
+#downloadButton > a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#downloadButton {
+    background-color: #526cff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+  #secondButton > a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#secondButton {
+    background-color: #36304a;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 350px;
+    margin: 0 auto;
+}
+
+@media (max-width: 300px) {
+    .button-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    color: #5d5d5d;
+}
+
+th {
+    background-color: #36304a;
+    color: white;
+    padding: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+h1, h4, p {
+    padding: 7px;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+    margin-bottom: 20px;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    overflow-x: auto;
+    min-width: 300px;
+    color: white;
+}
+
+h4 {
+    text-align: left;
+    font-size: 18px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5; 
+}
