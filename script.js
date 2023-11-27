@@ -29,24 +29,26 @@ document.onkeydown = e => {
     }
 }
 
+//Trail for mouse and touch
 document.addEventListener("DOMContentLoaded", function () {
     const mouseTrail = document.getElementById("mouse-trail");
 
     function addGlowTrail(e) {
         const glowTrail = document.createElement("div");
         glowTrail.style.position = "absolute";
-        glowTrail.style.left = (e.pageX || e.touches[0].pageX) + "px";
-        glowTrail.style.top = (e.pageY || e.touches[0].pageY) + "px";
+        glowTrail.style.left = (e.clientX || e.touches[0].clientX) + "px";
+        glowTrail.style.top = (e.clientY || e.touches[0].clientY) + "px";
         glowTrail.classList.add("mouse-glow");
-
+    
         // Append the glow trail to the trail
         mouseTrail.appendChild(glowTrail);
-
+    
         // Remove glow trail after the animation duration
         setTimeout(() => {
             glowTrail.remove();
         }, 500); // Adjusted the timeout to 500ms
     }
+    
 
     document.addEventListener("mousemove", addGlowTrail);
     document.addEventListener("touchmove", function (e) {
