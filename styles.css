@@ -115,6 +115,11 @@ th, td {
     padding: 10px;
     text-align: left;
     color: #5d5d5d;
+
+}
+
+a {
+    font-size: 12px;
 }
 
 th {
