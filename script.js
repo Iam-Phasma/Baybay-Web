@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //For ALPHA animation
 document.addEventListener("DOMContentLoaded", function () {
     const alphaAnimation = document.getElementById("alphaAnimation");
-    const word = "ALPHA";
+    const word = "RELEASE PREVIEW";
     let counter = 0;
     let scramble = setInterval(() => {
         let randomText = Math.random().toString(36).substring(7).toUpperCase();
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(scramble);
             clearInterval(reveal);
         }
-    }, 400);
+    }, 100);
 });
 
 
