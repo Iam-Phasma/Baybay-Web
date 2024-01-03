@@ -30,36 +30,36 @@ document.onkeydown = e => {
 }
 
 //Trail for mouse and touch
-document.addEventListener("DOMContentLoaded", function () {
-    const mouseTrail = document.getElementById("mouse-trail");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const mouseTrail = document.getElementById("mouse-trail");
 
-    function addGlowTrail(e) {
-        const glowTrail = document.createElement("div");
-        glowTrail.style.position = "absolute";
-        glowTrail.style.left = (e.pageX || e.touches[0].pageX) + "px";
-        glowTrail.style.top = (e.pageY || e.touches[0].pageY) + "px";
-        glowTrail.classList.add("mouse-glow");
+//     function addGlowTrail(e) {
+//         const glowTrail = document.createElement("div");
+//         glowTrail.style.position = "absolute";
+//         glowTrail.style.left = (e.pageX || e.touches[0].pageX) + "px";
+//         glowTrail.style.top = (e.pageY || e.touches[0].pageY) + "px";
+//         glowTrail.classList.add("mouse-glow");
 
-        // Append the glow trail to the trail
-        mouseTrail.appendChild(glowTrail);
+//         // Append the glow trail to the trail
+//         mouseTrail.appendChild(glowTrail);
 
-        // Remove glow trail after the animation duration
-        setTimeout(() => {
-            glowTrail.remove();
-        }, 500); // Adjusted the timeout to 500ms
-    }
+//         // Remove glow trail after the animation duration
+//         setTimeout(() => {
+//             glowTrail.remove();
+//         }, 500); // Adjusted the timeout to 500ms
+//     }
 
-    document.addEventListener("mousemove", addGlowTrail);
-    document.addEventListener("touchmove", function (e) {
-        addGlowTrail(e.touches[0]);
-    });
-});
+//     document.addEventListener("mousemove", addGlowTrail);
+//     document.addEventListener("touchmove", function (e) {
+//         addGlowTrail(e.touches[0]);
+//     });
+// });
 
 
 //For ALPHA animation
 document.addEventListener("DOMContentLoaded", function () {
     const alphaAnimation = document.getElementById("alphaAnimation");
-    const word = "RELEASE PREVIEW";
+    const word = "Release Preview";
     let counter = 0;
     let scramble = setInterval(() => {
         let randomText = Math.random().toString(36).substring(7).toUpperCase();
