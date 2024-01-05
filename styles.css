@@ -2,7 +2,8 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to top right, #4358cf, #c650c0);
+    /*background: linear-gradient(to top right, #4358cf, #c650c0);*/
+    background: linear-gradient(to top right, #1969ff, #5b51e6);
     background-size: 100% 100%;
     background-attachment: fixed;
 
@@ -70,15 +71,16 @@ button {
 
 #downloadButton > a {
     text-decoration:solid;
-    color: #fff;
+    color: #ffffff;
     font-weight: bolder;
     font-size:medium;
 }
 
 #downloadButton {
-    background-color: #54a3fd;
+    background-color: #00cf8aec;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-width: 90px;
+    min-width: 100px;
+    max-height: 35px;
 }
 
 #secondButton > a{
@@ -251,6 +253,7 @@ h5 {
     width: 90%;
     max-width: 650px;
     margin: auto;
+    margin-bottom: -15px;
 }
 /*
 @media screen and (max-width: 350px) {
@@ -308,7 +311,6 @@ h5 {
   .button {
     padding: 12px 20px;
     font-size: 16px;
-    background-color: #3498db;
     color: white;
     border: none;
     border-radius: 5px;
@@ -317,6 +319,5 @@ h5 {
   }
 
   .button:hover {
-    background-color: #2980b9;
     transform: scale(1.05);
   }
