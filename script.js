@@ -59,7 +59,7 @@ document.onkeydown = e => {
 //For ALPHA animation
 document.addEventListener("DOMContentLoaded", function () {
     const alphaAnimation = document.getElementById("alphaAnimation");
-    const word = "Release Preview";
+    const word = "Alpha Preview";
     let counter = 0;
     let scramble = setInterval(() => {
         let randomText = Math.random().toString(36).substring(7).toUpperCase();
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(scramble);
             clearInterval(reveal);
         }
-    }, 100);
+    }, 70);
 });
 
 
