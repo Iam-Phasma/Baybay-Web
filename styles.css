@@ -123,9 +123,13 @@ table {
 
 th, td {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 5px;
     text-align: left;
     color: #5d5d5d;
+}
+
+td {
+    font-size: 14px;
 }
 
 a {
