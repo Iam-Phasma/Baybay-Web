@@ -296,7 +296,7 @@ h5 {
 
   @media screen and (max-width: 600px) {
     .Text p {
-        min-width: 160px;
+        min-width: 180px;
     }
   }
 
