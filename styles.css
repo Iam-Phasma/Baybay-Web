@@ -276,6 +276,7 @@ h5 {
   .Image img {
     border-radius: 18px;
     margin-left: 80px;
+    margin-right: 20px;
   }
 
   img {
@@ -291,7 +292,7 @@ h5 {
   .Text p {
     color: #ffffff;
     max-width: 50%;
-    margin-right: 50px;
+    padding-right: 50px;
   }
 
   @media screen and (max-width: 600px) {
