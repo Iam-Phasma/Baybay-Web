@@ -292,7 +292,6 @@ h5 {
   .Text p {
     color: #ffffff;
     max-width: 50%;
-    padding-right: 50px;
   }
 
   @media screen and (max-width: 600px) {
