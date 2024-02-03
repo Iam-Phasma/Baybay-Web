@@ -76,8 +76,7 @@ img {
 .app-title-button-container {
     display: grid;
     grid-template-rows: 1fr;
-    align-items: center;
-
+    align-items: center; 
 }
  
 .app-title-container {
