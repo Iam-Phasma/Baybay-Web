@@ -250,31 +250,30 @@ tbody tr:hover {
 
 
 
-/* CSS */
 .button-56 {
-  align-items: center;
-  background-color: #73e0f3;
-  border: 2px solid #111;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #111;
-  cursor: pointer;
-  display: flex;
-  font-family: Inter,sans-serif;
-  font-size: 16px;
-  height: 48px;
-  justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
-  padding: 0 25px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  margin-bottom: 8px;
-}
+    align-items: center;
+    background-color: #73e0f3;
+    border: 2px solid #111;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    font-family: Inter,sans-serif;
+    font-size: 16px;
+    height: 48px;
+    justify-content: center;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin-bottom: 8px;
+  }
 
 .button-56:after {
   background-color: #111;
@@ -305,7 +304,7 @@ tbody tr:hover {
 }
 
 @media (min-width: 768px) {
-  .button-56 {
-    padding: 0 40px;
+    .button-56 {
+      padding: 0 40px;
+    }
   }
-}
