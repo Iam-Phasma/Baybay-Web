@@ -3,8 +3,8 @@ body {
     font-size: 15px;
     margin: 0;
     padding: 0;
-    color: white; 
-    background: linear-gradient(to top right, #7533cc, #5c51ff); 
+    color: rgb(0, 0, 0); 
+    background: linear-gradient(to top right, #f7d6ac, #f7ddbb); 
     background-size: 100% 100%; 
     background-attachment: fixed; 
 
