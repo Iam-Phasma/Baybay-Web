@@ -6,22 +6,8 @@
     padding-bottom: 30px;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
-    color: white;
-    background: linear-gradient(to top right, #7533cc, #5c51ff);
-    background-size: 100% 100%;
-    background-attachment: fixed;
-
-    scrollbar-width: thin; /* For Firefox */
-    -ms-overflow-style: none; /* For IE and Edge */
-}
-
 a {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 p {
@@ -34,11 +20,11 @@ p {
     margin: 0 auto;
     overflow-x: auto;
     min-width: 300px;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 header {
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     padding: 20px;
     font-size: 20px;
