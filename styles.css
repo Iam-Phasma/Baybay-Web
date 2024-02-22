@@ -257,8 +257,8 @@ tbody tr:hover {
   position: relative;
   text-align: center;
   text-decoration: none;
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
   touch-action: manipulation;
   margin-bottom: 8px;
 }
