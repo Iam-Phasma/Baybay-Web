@@ -1,19 +1,16 @@
 body {
-    font-family: 'Arial', sans-serif;
-    font-size: 15px;
-    margin: 0;
-    padding: 0;
-    color: rgb(0, 0, 0); 
-    background: linear-gradient(to top right, #f7d6ac, #f7ddbb); 
-    background-size: 100% 100%; 
-    background-attachment: fixed; 
+  font-family: "Arial", sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  color: rgb(0, 0, 0);
+  background: linear-gradient(to top right, #f7d6ac, #f7ddbb);
+  background-size: 100% 100%;
+  background-attachment: fixed;
 
-    scrollbar-width: thin;
-    -ms-overflow-style: none; 
+  scrollbar-width: thin;
+  -ms-overflow-style: none;
 }
-
-  
-
 
 /* Background 2 */
 /* @keyframes bg-scrolling-reverse {
