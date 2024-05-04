@@ -137,8 +137,7 @@ section {
 }
 
 .section-title {
-  padding-top: 20px;
-  padding-bottom: 5px;
+  padding-top: 30px;
   width: 90%;
   max-width: 600px;
   margin: 0 auto;
@@ -146,13 +145,18 @@ section {
 }
 
 .section-header {
-  margin: 7px;
   width: 90%;
   padding-bottom: 10px;
   max-width: 600px;
   margin: 0 auto;
   overflow-x: auto;
   min-width: 300px;
+}
+
+ul{
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .table-container {
