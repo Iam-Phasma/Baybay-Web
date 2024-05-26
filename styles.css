@@ -1,4 +1,4 @@
-
+/*
 .main-grid {
   display: flex;
   flex-direction: column;
@@ -66,8 +66,8 @@ header {
 }
 
 img {
-  max-width: 10%; /* Adjusted the max-width */
-  min-width: 95px; /* Set a minimum width for the image */
+  max-width: 10%;  Adjusted the max-width 
+  min-width: 95px;  Set a minimum width for the image 
 }
 
 .app-title-button-container {
@@ -222,7 +222,7 @@ tbody tr:hover {
   border-style: solid;
   border-radius: 20px;
   padding: 10px 25px;
-  display: inline-block; /* Ensure button and text are aligned properly */
+  display: inline-block;  Ensure button and text are aligned properly 
 }
 
 .secondButton:hover {
@@ -311,3 +311,4 @@ tbody tr:hover {
     padding: 0 40px;
   }
 }
+*/

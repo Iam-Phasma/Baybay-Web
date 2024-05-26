@@ -30,7 +30,7 @@
       content="Welcome to Baybay, the modern Baybayin learning app for Android! Learn to read, write, and play with Baybayin, through this engaging baybayin mobile app."
     />
 
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
     <link rel="stylesheet" type="text/css" href="background.css" />
     <script type="text/javascript" src="script.js"></script>
 
@@ -40,10 +40,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   </head>
 
-    <body>
-
+     <body><!--
         <div class="main-grid">
             <header>
                 <h1 id="scrumbleText" style="font-size: 1.3em;">Baybay: Modern Baybayin Learning App for Android<br> <span class="alpha-word">[<span id="alphaAnimation"></span>]</span></h1>
@@ -80,10 +81,10 @@
 
             <div style="margin-right: 20px;">
                 <ol>
-                    <p>1. Click the button above to begin the process.</p>
-                    <p>2. You'll be navigated to a Google Drive folder..</p>
-                    <p>3. Select the "Download button to proceed to the last step".</p>
-                    <p>4. Hit the "Download anyway" button and wait the completeion of the download. Install and enjoy the app.</p>
+                    <li> Click the button above to begin the process.</li>
+                    <li> You'll be navigated to a Google Drive folder..</li>
+                    <li> Select the "Download button to proceed to the last step".</li>
+                    <li> Hit the "Download anyway" button and wait the completion of the download. Install and enjoy the app.</li>
                 </ol>
             </div>
             
@@ -288,5 +289,329 @@
         </p>
         
         <br><br>
+
+
+         -->
+    </body>
+
+    <body>
+        <div class="container" style="max-width: 700px; padding-bottom: 50px;">
+            <div class="px-4 my-5 text-center">
+                <h1 class="font-weight-bold" style="font-size: 2rem">Baybay: Modern Baybayin Learning App for Android<br> <span class="alpha-word">[<span id="alphaAnimation"></span>]</span></h1>
+                <br>
+    
+                <div class="">
+                    <p class="">Welcome to Baybay, the modern Baybayin learning app for Android! Explore our latest updates and downloads below. To ensure you’re viewing the most recent content, consider refreshing the webpage. Happy learning with Baybay! </p>
+                </div>
+            </div>
+
+            <!-- NEW VERSION -->
+            <div class="card container" style="border: none; border-radius: 10px; padding: 10px;  background-color: bisque; max-width: 630px;">
+                <div class="card-body" >
+                  <h5 class="card-title">Here's the lates Baybay!</h5>
+
+                  <p class="card-text">New: Added Firebase Cloud Messaging to improve the app functionality.<br>
+                    <span class="card-text"><small class="text-body-secondary">April 10, 2024</small></span>
+                  </p>
+
+                <a href="https://drive.google.com/uc?export=download&id=1NcEh8FGKOTKo_AiLlDnGh33DHRnOoAyg" class="btn btn-primary btn-md" download target="_blank">Download</a>
+                </div>
+            </div>
+            
+            <div class="px-4 my-5 text-start">
+                <p class="font-weight-bold" >🎮 To download the newest version of the app, simply follow these steps:</p>
+
+                <ol>
+                    <li> Click the button above to begin the process.</li>
+                    <li> You'll be navigated to a Google Drive folder.</li>
+                    <li> Hit the "Download anyway" button and wait the completion of the download. </li>
+                    <li>Install and enjoy the app.</li>
+                </ol>
+            </div>
+
+            <!-- App Demo -->
+            <div class="px-4 my-5 text-start">
+                <p class="font-weight-bold">🤖 Made for Capstone Project Only</p>
+
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video src="app_demo_baybay.mp4" class="embed-responsive-item object-fit-contain" autoplay style="border-radius: 15px;"></video>
+                </div>
+
+                <p class="pt-3">We've just launched the release version! 🚀 While we've put our heart into it, we want to be upfront—like any adventure, there might be a few bugs along the way, and it might not look perfect on every device. 🤷‍♂️ But hey, perfection is overrated, right? Let's make this journey together! Enjoy the app and its quirks! 🎉✨
+                </p>
+            </div>
+            
+            <!-- Changelog -->
+            <div class="px-4 my-5 text-start">
+                <p class="font-weight-bold">📅 Changelog</p>
+                <p>
+                    List of all previous app versions. Scroll down the table to see more. Please note, these versions are not available for download.
+                </p>
+            </div>
+
+            <!-- Table settings -->
+            <style>
+                .scrollable {
+                    height: 605px;
+                    overflow: auto;
+                    -ms-overflow-style: none; 
+                    scrollbar-width: none;
+                }
+
+                .scrollable::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .table thead {
+                    position: sticky;
+                    top: 0;
+                    background-color: bisque;
+                }
+            </style>
+
+            <!-- Table contents-->
+            <div class="scrollable container" style="border: 1px solid rgb(102, 102, 102); border-radius: 15px; padding: 20px; padding-top: 0px; background-color: bisque; max-width: 630px;"> 
+
+                <style>
+                    .center-text {
+                        text-align: center;
+                        text-wrap: nowrap;
+                    }
+                </style>
+
+                <table class="table table-borderless">
+                    <thead style="height: 60px;">
+                        <tr>
+                            <th class="center-text">Version</th>
+                            <th class="center-text">Date</th>
+                            <th>Changes</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td class="center-text">3.4.3</td>
+                            <td class="center-text">Apr 9, 2024</td>
+                            <td>Full chart module sound effect, and Learn module submenu arrangement fixes. Added Firebase Analytics.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">3.3.2</td>
+                            <td class="center-text">Apr 6, 2024</td>
+                            <td>Added a progress indicator and swipe gesture in Lesson: Rules, re-arranged contents in Lesson: Introduction, and small bug fixes.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">3.2.1</td>
+                            <td class="center-text">Jan 26, 2024</td>
+                            <td>Added a new "About App" section and fully implemented the dynamic theme color selection in the settings dialog.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">3.1.0</td>
+                            <td class="center-text">Jan 24, 2024</td>
+                            <td>Background music and theme color selection is now available.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">2.7.1</td>
+                            <td class="center-text">Jan 21, 2024</td>
+                            <td>Addressed minor linguistic adjustments. Also, redesigned the settings dialog.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">2.6.0</td>
+                            <td class="center-text">Jan 12, 2024</td>
+                            <td>Addressed minor linguistic adjustments based on user feedback.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">2.5.1</td>
+                            <td class="center-text">Jan 5, 2024</td>
+                            <td>Direct link to check for latest app version.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">2.4.1</td>
+                            <td class="center-text">n/a</td>
+                            <td>Gameplay voice clips update and quiz scoreboard fixes.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">2.3.0</td>
+                            <td class="center-text">n/a</td>
+                            <td>Legacy texture update completed. </td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">2.2.0</td>
+                            <td class="center-text">n/a</td>
+                            <td>New sound manager service.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">2.1.0</td>
+                            <td class="center-text">n/a</td>
+                            <td>Added narration on Lesson: Baybayin Origin.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">2.0.0</td>
+                            <td class="center-text">n/a</td>
+                            <td>Full UI overhaul and added new features.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">1.3.1</td>
+                            <td class="center-text">n/a</td>
+                            <td>Fixed guide sub menus; can be press more than once.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">1.3.0</td>
+                            <td class="center-text">n/a</td>
+                            <td>Added new content in Lesson: Rules.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">1.2.1</td>
+                            <td class="center-text">n/a</td>
+                            <td>Game: Matching fixes and new app icon.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">1.2.0</td>
+                            <td class="center-text">n/a</td>
+                            <td>Added new content in Lesson: Rules.</td>
+                        </tr>
+
+                        <tr>
+                            <td class="center-text">1.1.0</td>
+                            <td class="center-text">n/a</td>
+                            <td>Added toast pop-up cancel event.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+
+
+            <!-- Purpose -->
+            <div class="px-4 my-5 text-start">
+                <p class="font-weight-bold">✨ Purpose</p>
+            
+                <p>Learn to read, write, and play with modern baybayin (B20+), the ancient Philippine script, through this engaging mobile app. Discover curated online resources, skill tests, and memory games designed for all. Enjoy stress-free learning at your own pace, while enhancing memory and cognitive skills. Connect with a community of Baybayin enthusiasts and become inspired with local arts and merchandise – all on your mobile device! Download now and embrace your cultural heritage in a fun and accessible way.<br><br>
+                
+                    Keywords: Baybayin, Philippine culture, mobile learning, games, memory, community, heritage
+                    
+                </p>
+            </div>
+
+            <!-- Attribution -->
+            <div class="px-4 my-5 text-start">
+                <p class="font-weight-bold">🎓 Attributions</p>
+                <p>
+                    Press the button to show or hide more information.
+                </p>
+            </div>
+
+            <div class="container" style="max-width: 650px;">
+                <button class="btn btn-primary btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#music" aria-expanded="false" aria-controls="music" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
+                  Music
+                </button>
+
+                <div class="collapse show" id="music">
+                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
+                        <ul>
+                            <li><a href="https://opengameart.org/content/woodland-fantasy">Woodland Fantasy</a>, <a href="https://opengameart.org/content/curious-critters"> Curius Critters</a>, and <a href="https://opengameart.org/content/pleasant-creek">Pleasant Creek</a>
+                            Licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC-BY 3.0</a>
+                            by Mattew Pablo</li>
+                            <li><a href="https://youtu.be/wE6kqJ_uy4M?si=T0ANFkwcxmKuaSdJ">Abakada Song</a> by robie317
+                            Licensed: Fair Use</li><br>
+            
+                            This app incorporates audio excerpts (under Introduction module) from a YouTube video for educational purposes. The use of this content is believed to be a fair use under copyright law, as it is utilized for non-commercial, educational purposes, and the amount and nature of the material used are appropriate for educational commentary.
+                        </ul>  
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-block" type="button"     data-bs-toggle="collapse" data-bs-target="#soundfx" aria-expanded="false" aria-controls="soundfx" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
+                    Sound Effects
+                </button>
+  
+                <div class="collapse" id="soundfx">
+                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
+                        <ul>
+                            <li><a href="https://www.youtube.com/watch?v=7N4461Y0NEo">Menu Selection Sound Effect</a> by Sound-effect-source <a href="https://www.mediafire.com/file/si9vafp7eeywm67/Menu+Selection+Sound+Effect.mp3/file">Alternative download Link</a></li>
+                            <li><a href="https://pixabay.com/sound-effects/tap-notification-180637/">Tap Notification</a> by lucadialessandro Licensed under <a href="https://pixabay.com/license/">Pixabay Content License</a></li>
+                            <li><a href="https://opengameart.org/content/level-up-power-up-coin-get-13-sounds">Level Up Power-Up Coin Get 13 Sounds</a> by Wobbleboxx Licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li>
+                            <li><a href="https://opengameart.org/content/card-game-sounds">Card Game Sounds</a> by HaelDB Licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-block" type="button"     data-bs-toggle="collapse" data-bs-target="#graphics" aria-expanded="false" aria-controls="graphics" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
+                    Graphics
+                </button>
+  
+                <div class="collapse" id="graphics">
+                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
+                        <ul>
+                            <li>Images and graphics created using <a href="https://www.canva.com">Canva</a></li>
+                            <li>Icons from <a href="https://icons8.com">icons8.com</a></li>
+                            <li>Image by upklyak on <a href="https://www.freepik.com/free-vector/viking-runes-alphabet-celtic-font-with-runic-signs_20873473.htm#query=rune%20alphabet&position=4&from_view=author&uuid=c18e0a69-1ebc-4c75-b7b9-3bd072b7b610">Freepik</a> Licensed under <a href="https://support.freepik.com/s/article/Attribution-How-when-and-where-FI?language=en_US">Free Licence</a></li>
+                            <br>
+            
+                            This app includes images (under Arts and Crafts module) sourced from public Facebook groups and online searches for educational purposes. We believe this usage constitutes fair use under copyright law, as the images are employed for non-commercial, educational purposes, and the amount and nature of the material used are suitable for educational commentary.
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-block" type="button"     data-bs-toggle="collapse" data-bs-target="#software" aria-expanded="false" aria-controls="software" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
+                    Software
+                </button>
+  
+                <div class="collapse" id="software">
+                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
+                        <ul>
+                            <li> Audio (under Baybayin script origin) generated by the text-to-speech reader website <a href="https://ttsreader.com/player/">TTSReader</a>. For more information, please visit https://ttsreader.com/player/</li>
+                            <li> <a href="https://www.narakeet.com/app/text-to-audio/?projectId=82672600-5d8d-4880-8601-fea0ce4d4aa6">Narakeet </a>Text to Speech Online.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-block" type="button"     data-bs-toggle="collapse" data-bs-target="#textmaterials" aria-expanded="false" aria-controls="textmaterials" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
+                    Text Materials
+                </button>
+  
+                <div class="collapse" id="textmaterials">
+                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
+                        <ul>
+                            <li><a href="https://www.mgakwentongbayan.com">Mga Kwentong Bayan</a></li>
+                            <li><a href="https://philnews.ph/2020/01/07/tula-10-halimbawa-ng-mga-tulang-pilipino-philnews/">Philippine News</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary btn-block" type="button"     data-bs-toggle="collapse" data-bs-target="#others" aria-expanded="false" aria-controls="others" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
+                    Others
+                </button>
+  
+                <div class="collapse" id="others">
+                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
+                        <ul>
+                            <li> Design Inspiration from <a href="https://dribbble.com">Dribbble</a> and <a href="https://www.pinterest.ph">Pinterest</a></li>
+                            <li>Notification <a href="https://youtu.be/GDxj8KTmLrI?si=SGKJggMDdGM6yezy">tutorial</a>  by SNA Tech</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
