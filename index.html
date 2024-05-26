@@ -333,15 +333,25 @@
             <div class="px-2 my-5 text-start">
                 <p class="font-weight-bold">🤖 Made for Capstone Project Only</p>
 
-                <div class="embed-responsive embed-responsive-16by9">
-                    <video src="app_demo_baybay.mp4" class="embed-responsive-item object-fit-contain" alt="Video Teaser Loading..." autoplay style="border-radius: 15px;"></video>
-                    <div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                        <i class="fas fa-spinner fa-spin fa-3x"></i>
-                    </div>
-                </div>
+                
 
                 <p class="pt-3">We've just launched the release version! 🚀 While we've put our heart into it, we want to be upfront—like any adventure, there might be a few bugs along the way, and it might not look perfect on every device. 🤷‍♂️ But hey, perfection is overrated, right? Let's make this journey together! Enjoy the app and its quirks! 🎉✨
                 </p>
+
+                <button class="btn btn-primary btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#teaser" aria-expanded="false" aria-controls="teaser" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
+                    Watch our Video Teaser
+                </button>
+                
+                <div class="collapse" id="teaser">
+                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <video src="app_demo_baybay.mp4" class="embed-responsive-item object-fit-contain" alt="Video Teaser Loading..." autoplay loop style="border-radius: 15px;"></video>
+                            <div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                <i class="fas fa-spinner fa-spin fa-3x"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <!-- Changelog -->
