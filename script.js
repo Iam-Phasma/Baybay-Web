@@ -37,6 +37,46 @@
   });
 }());
 
+// ===== SCREENSHOT PEEK CAROUSEL =====
+document.addEventListener('DOMContentLoaded', function () {
+  var carousel = document.getElementById('screenshotCarousel');
+  if (!carousel) return;
+
+  var items = Array.prototype.slice.call(carousel.querySelectorAll('.carousel-item'));
+  if (items.length < 2) return;
+
+  function getActiveIndex() {
+    var activeIndex = items.findIndex(function (item) {
+      return item.classList.contains('active');
+    });
+
+    return activeIndex === -1 ? 0 : activeIndex;
+  }
+
+  function syncPeekClasses() {
+    var activeIndex = getActiveIndex();
+    var prevIndex = (activeIndex - 1 + items.length) % items.length;
+    var nextIndex = (activeIndex + 1) % items.length;
+
+    items.forEach(function (item, index) {
+      item.classList.remove('peek-prev', 'peek-active', 'peek-next', 'peek-hidden');
+
+      if (index === activeIndex) {
+        item.classList.add('peek-active');
+      } else if (index === prevIndex) {
+        item.classList.add('peek-prev');
+      } else if (index === nextIndex) {
+        item.classList.add('peek-next');
+      } else {
+        item.classList.add('peek-hidden');
+      }
+    });
+  }
+
+  syncPeekClasses();
+  carousel.addEventListener('slid.bs.carousel', syncPeekClasses);
+});
+
 // ===== ALPHA SCRAMBLE ANIMATION =====
 document.addEventListener("DOMContentLoaded", function () {
   const alphaAnimation = document.getElementById("alphaAnimation");

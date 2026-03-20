@@ -304,25 +304,153 @@ a:hover {
    =========================== */
 
 .carousel-custom {
-  border-radius: var(--r-xl);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--border);
+  --peek-width: 86%;
+  --peek-shift: 28%;
+  --peek-scale: 0.84;
+  --peek-drop: 16px;
+  --peek-tilt: 6deg;
+  --peek-hover-shift: 33%;
+  --peek-hover-scale: 0.82;
+  --peek-hover-drop: 22px;
+  --peek-hover-tilt: 8deg;
+  --peek-pad-x: clamp(16px, 4vw, 42px);
+  --peek-pad-bottom: 22px;
+  position: relative;
+  padding: 0 var(--peek-pad-x) var(--peek-pad-bottom);
+  overflow: visible;
+  isolation: isolate;
+}
+
+.carousel-custom .carousel-inner {
+  position: relative;
+  display: grid;
+  align-items: center;
+  overflow: visible;
 }
 
 .carousel-custom .carousel-item {
-  transition: opacity 0.45s ease-in-out;
+  grid-area: 1 / 1;
+  display: block;
+  position: relative;
+  width: var(--peek-width);
+  margin: 0 auto;
   opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+  transform: translateX(0) scale(0.78);
+  filter: saturate(0.84) brightness(0.92);
+  transition:
+    transform 0.58s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.32s ease,
+    filter 0.32s ease;
+  will-change: transform, opacity;
 }
 
-.carousel-custom .carousel-item.active {
-  opacity: 1;
+.carousel-custom .carousel-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r-lg);
+  background: linear-gradient(120deg, transparent 18%, rgba(255,255,255,0.18) 48%, transparent 74%);
+  opacity: 0;
+  transform: translateX(-20%);
+  transition: opacity 0.32s ease, transform 0.58s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
 }
 
 .carousel-custom .carousel-item img {
-  border-radius: 0;
+  border-radius: var(--r-lg);
   width: 100%;
   display: block;
+  border: 1px solid var(--border);
+  background: var(--card-warm);
+  box-shadow: var(--shadow-lg);
+  transition: box-shadow 0.32s ease, border-color 0.28s ease;
+}
+
+.carousel-custom .carousel-item.active,
+.carousel-custom .carousel-item.peek-active {
+  opacity: 1;
+  z-index: 3;
+  pointer-events: auto;
+  transform: translateX(0) translateY(0) scale(1) rotate(0deg);
+  filter: none;
+}
+
+.carousel-custom .carousel-item.peek-prev,
+.carousel-custom .carousel-item.peek-next {
+  opacity: 0.96;
+  z-index: 2;
+}
+
+.carousel-custom .carousel-item.peek-prev {
+  transform: translateX(calc(-1 * var(--peek-shift))) translateY(var(--peek-drop)) scale(var(--peek-scale)) rotate(calc(-1 * var(--peek-tilt)));
+}
+
+.carousel-custom .carousel-item.peek-next {
+  transform: translateX(var(--peek-shift)) translateY(var(--peek-drop)) scale(var(--peek-scale)) rotate(var(--peek-tilt));
+}
+
+.carousel-custom .carousel-item.peek-prev img,
+.carousel-custom .carousel-item.peek-next img {
+  box-shadow: var(--shadow-sm);
+}
+
+.carousel-custom .carousel-item.peek-hidden {
+  opacity: 0;
+  z-index: 1;
+}
+
+.carousel-custom:hover .carousel-item.peek-active,
+.carousel-custom:focus-within .carousel-item.peek-active {
+  transform: translateY(-10px) scale(1.015);
+}
+
+.carousel-custom:hover .carousel-item.peek-prev,
+.carousel-custom:focus-within .carousel-item.peek-prev {
+  transform: translateX(calc(-1 * var(--peek-hover-shift))) translateY(var(--peek-hover-drop)) scale(var(--peek-hover-scale)) rotate(calc(-1 * var(--peek-hover-tilt)));
+}
+
+.carousel-custom:hover .carousel-item.peek-next,
+.carousel-custom:focus-within .carousel-item.peek-next {
+  transform: translateX(var(--peek-hover-shift)) translateY(var(--peek-hover-drop)) scale(var(--peek-hover-scale)) rotate(var(--peek-hover-tilt));
+}
+
+.carousel-custom:hover .carousel-item.peek-active::after,
+.carousel-custom:focus-within .carousel-item.peek-active::after {
+  opacity: 1;
+  transform: translateX(18%);
+}
+
+.carousel-custom .carousel-control-prev,
+.carousel-custom .carousel-control-next {
+  z-index: 4;
+  width: clamp(56px, 12%, 92px);
+  transition: opacity 0.28s ease;
+}
+
+@media (hover: hover) {
+  .carousel-custom .carousel-control-prev,
+  .carousel-custom .carousel-control-next {
+    opacity: 0;
+  }
+
+  .carousel-custom:hover .carousel-control-prev,
+  .carousel-custom:hover .carousel-control-next,
+  .carousel-custom:focus-within .carousel-control-prev,
+  .carousel-custom:focus-within .carousel-control-next {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-custom .carousel-item,
+  .carousel-custom .carousel-item::after,
+  .carousel-custom .carousel-item img,
+  .carousel-custom .carousel-control-prev,
+  .carousel-custom .carousel-control-next {
+    transition: none;
+  }
 }
 
 /* ===========================
@@ -669,6 +797,25 @@ a:hover {
 
   .content-section {
     margin: 46px 0;
+  }
+
+  .carousel-custom {
+    --peek-width: 92%;
+    --peek-shift: 18%;
+    --peek-scale: 0.90;
+    --peek-drop: 10px;
+    --peek-tilt: 4deg;
+    --peek-hover-shift: 22%;
+    --peek-hover-scale: 0.88;
+    --peek-hover-drop: 14px;
+    --peek-hover-tilt: 5deg;
+    --peek-pad-x: 6px;
+    --peek-pad-bottom: 14px;
+  }
+
+  .carousel-custom .carousel-control-prev,
+  .carousel-custom .carousel-control-next {
+    width: 52px;
   }
 
   .collapse-card {
