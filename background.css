@@ -497,6 +497,41 @@ a:hover {
   overflow-wrap: anywhere;
 }
 
+.steps-list .download-pill-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  margin: 0 2px;
+  border-radius: 999px;
+  border: 1px solid var(--gold);
+  background: var(--gold-dim);
+  color: var(--amber);
+  font-family: var(--font-head);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.2;
+  transform: translateY(-1px);
+  transition: background-color 0.18s ease, color 0.18s ease, transform 0.18s ease;
+}
+
+.steps-list .download-pill-link:hover {
+  background: var(--gold);
+  color: var(--hero-dark);
+  transform: translateY(-2px);
+}
+
+.steps-list .download-pill-link:active {
+  transform: translateY(-1px);
+}
+
+.steps-list .download-pill-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
 /* ===========================
    BODY TEXT
    =========================== */
