@@ -3,514 +3,315 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="icon" href="ic_launcher-playstore.png" type="image/png" />
-
-    <!-- Meta tags for preventing caching -->
-    <meta
-      http-equiv="Cache-Control"
-      content="no-store, no-cache, must-revalidate, max-age=0"
-    />
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-
-    <meta
-      name="google-site-verification"
-      content="g3QTF0wZ7BFtZJbju3Y2Idp0HixeI1FNED7PJX-67yw"
-    />
+    <meta name="google-site-verification" content="g3QTF0wZ7BFtZJbju3Y2Idp0HixeI1FNED7PJX-67yw" />
     <meta name="msvalidate.01" content="2C2149327814D1F3A141A6B1C9DE2BD3" />
     <meta name="wot-verification" content="08c8223388b65637a7d6" />
-
-    <!-- Adsense -->
     <meta name="google-adsense-account" content="ca-pub-1849064475427266" />
-
-    <title>Modern Baybayin: Baybay App</title>
-    <meta
-      name="description"
-      content="Welcome to Baybay, the modern free Baybayin script app for Android! Learn to read, write, traslate baybayin, and play with Baybayin app, through this engaging free baybayin mobile app."
-    />
-
-    <!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
-    <link rel="stylesheet" type="text/css" href="background.css" />
-    <script type="text/javascript" src="script.js"></script>
-
+    <title>Baybay | Baybayin Learning App for Android</title>
+    <meta name="description" content="Baybay is a free Android app for learning Baybayin. Practice reading, writing, transliteration, and memory games while exploring Filipino script and culture." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Lora:ital,wght@0,400;0,600;1,400&family=Noto+Sans+Tagalog&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="background.css" />
+    <script src="script.js"></script>
   </head>
+  <body>
 
-    <body>
-        <div class="container" style="max-width: 700px; padding-bottom: 50px;">
-            <div class="px-2 my-5 text-center">
-                <h1 class="font-weight-bold" style="font-size: 1.8rem">Baybay: Modern Baybayin Learning App for Android<br> <span class="alpha-word">[<span id="alphaAnimation"></span>]</span></h1>
-                <br>
-    
-                <div class="">
-                    <p class="">Welcome to Baybay, a free modern Baybayin learning app for Android! Explore the latest updates and downloads below. To ensure you’re viewing the most recent content, consider refreshing the webpage. Happy learning with Baybay! </p>
-                </div>
+    <!-- Theme toggle -->
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark/light mode" title="Toggle dark/light mode">
+      <!-- Sun icon -->
+      <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+        <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+      </svg>
+      <!-- Moon icon -->
+      <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+
+    <!-- HERO -->
+    <header class="hero">
+      <div class="hero-content">
+        <div class="app-badge">Free Android App</div>
+        <div class="hero-script" aria-label="Baybay in Baybayin script">&#x170A;&#x170C;&#x1714;&#x170A;&#x170C;&#x1714;</div>
+        <h1 class="hero-title">Baybay</h1>
+        <p class="hero-tagline">Baybayin Learning App for Android &nbsp;&middot;&nbsp; <span class="alpha-word">[<span id="alphaAnimation"></span>]</span></p>
+        <p class="hero-desc">Baybay helps you learn Baybayin through guided lessons, quizzes, transliteration tools, and memory games. Built as a cultural learning project, it stays practical, approachable, and free.</p>
+        <a href="https://mega.nz/file/nmJVDBKR#CZAGdwqdnaHLlQUxAx5kThzrFxsCtHVSxz5GDFJE-uA" class="btn-download-hero" download target="_blank" rel="noopener noreferrer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
+            <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+          </svg>
+          Download v3.8.3
+        </a>
+        <p class="hero-meta">Released December 2023 &nbsp;&middot;&nbsp; <a href="https://drive.google.com/file/d/1qh5qgvy0bs_BKlJtrOdahYZhr7QxLaOU/view?usp=sharing" class="hero-alt-link">Alternative download link</a></p>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- Latest Release -->
+      <section class="content-section">
+        <div class="section-label">Latest Release</div>
+        <h2 class="section-title">What&rsquo;s New in 3.8.3</h2>
+        <div class="release-card">
+          <p>This update fixes an issue where the canvas info slider could not be interrupted with swipe gestures. It also resolves orientation issues on certain screens.</p>
+        </div>
+      </section>
+
+      <!-- Screenshots -->
+      <section class="content-section">
+        <div class="section-label">Gallery</div>
+        <h2 class="section-title">App Screenshots</h2>
+        <div id="screenshotCarousel" class="carousel slide carousel-custom" data-bs-ride="carousel" data-bs-interval="3500">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><img src="demo1.png" class="d-block w-100" alt="Baybay App Screenshot 1" /></div>
+            <div class="carousel-item"><img src="demo2.png" class="d-block w-100" alt="Baybay App Screenshot 2" /></div>
+            <div class="carousel-item"><img src="demo3.png" class="d-block w-100" alt="Baybay App Screenshot 3" /></div>
+            <div class="carousel-item"><img src="demo4.png" class="d-block w-100" alt="Baybay App Screenshot 4" /></div>
+            <div class="carousel-item"><img src="demo5.png" class="d-block w-100" alt="Baybay App Screenshot 5" /></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#screenshotCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- How to Download -->
+      <section class="content-section">
+        <div class="section-label">Guide</div>
+        <h2 class="section-title">How to Download</h2>
+        <ol class="steps-list">
+          <li>Tap the download button above.</li>
+          <li>You will be redirected to the MEGA download page.</li>
+          <li>The file preview may fail, but the APK is still available. Tap Download, or open it in the MEGA app if it is installed.</li>
+          <li>If MEGA does not work, use the Google Drive mirror or download from <a href="https://apkpure.com/baybay/com.example.baybay">APKPure</a>.</li>
+          <li><strong>Note:</strong> Some browsers may open ads or redirects. If that happens, close the extra tab and return to this page.</li>
+          <li>Install the APK and start learning Baybayin.</li>
+        </ol>
+      </section>
+
+      <!-- Purpose -->
+      <section class="content-section">
+        <div class="section-label">About</div>
+        <h2 class="section-title">Purpose</h2>
+        <p class="body-text">Baybay was made to help learners understand and practice Baybayin in a more approachable way, especially students and first-time learners. It combines lessons, quizzes, and memory games so you can study at your own pace.</p>
+        <p class="body-text">The app also introduces B20+, a modern Baybayin variant, while keeping the script&rsquo;s cultural roots in focus. The goal is simple: help more people read, write, and appreciate Baybayin.</p>
+        <p class="tags-text">Keywords: Baybayin, Filipino culture, language learning, Android app, educational games</p>
+      </section>
+
+      <!-- Capstone Note -->
+      <section class="content-section">
+        <div class="section-label">Background</div>
+        <h2 class="section-title">Capstone Project Note</h2>
+        <p class="body-text">Baybay was developed as a capstone project and is shared as-is. Active development has ended, so some features may behave differently across devices. Thank you for trying the app and supporting the project.</p>
+        <button class="collapsible-btn" type="button" data-bs-toggle="collapse" data-bs-target="#teaser" aria-expanded="false" aria-controls="teaser">
+          Watch the Project Teaser
+        </button>
+        <div class="collapse" id="teaser">
+          <div class="collapse-card" style="margin-top: 12px;">
+            <video src="app_demo_baybay.mp4" class="w-100" style="border-radius: 10px;" autoplay loop muted playsinline></video>
+          </div>
+        </div>
+      </section>
+
+      <!-- Privacy Policy -->
+      <section class="content-section">
+        <div class="section-label">Legal</div>
+        <h2 class="section-title">Privacy Policy</h2>
+        <p class="body-text">Baybay respects your privacy. This policy explains what permissions the app uses and how third-party services are handled.</p>
+        <button class="collapsible-btn" type="button" data-bs-toggle="collapse" data-bs-target="#policy" aria-expanded="false" aria-controls="policy">
+          View Privacy Policy
+        </button>
+        <div class="collapse" id="policy">
+          <div class="collapse-card" style="margin-top: 12px;">
+            <ol class="policy-list">
+              <li>
+                <strong>Data Collection</strong>
+                <p>We do not collect personal data. The app may request access to the following device features to support core functions:</p>
+                <ul>
+                  <li><strong>Microphone:</strong> Used for voice input features.</li>
+                  <li><strong>Storage:</strong> Used to save user-generated content and progress.</li>
+                  <li><strong>Wi-Fi/Internet:</strong> Optional; used for online content and external links.</li>
+                </ul>
+                <p>Baybay does not store personal data on its own servers and does not sell data to third parties.</p>
+              </li>
+              <li>
+                <strong>Use of Third-Party Services</strong>
+                <p>We use Google Firebase for push notifications. Firebase may process limited technical identifiers (such as device tokens) to deliver notifications. We do not directly access or store this data. See the <a href="https://firebase.google.com/support/privacy/">Google Firebase Privacy Policy</a> for details.</p>
+              </li>
+              <li>
+                <strong>Data Security</strong>
+                <p>Because we do not collect personal data directly, Baybay does not keep personal profiles on its own servers. Requested permissions are used only for app features.</p>
+              </li>
+              <li>
+                <strong>User Rights</strong>
+                <p>Because Baybay does not collect or store personal data directly, requests for data access, correction, or deletion generally do not apply. You can <a href="https://support.google.com/android/answer/9431959?hl=en">revoke permissions</a> through your device settings at any time.</p>
+              </li>
+              <li>
+                <strong>Children&rsquo;s Privacy</strong>
+                <p>Baybay is an educational app and may be used by learners of different ages.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Changelog -->
+      <section class="content-section">
+        <div class="section-label">History</div>
+        <h2 class="section-title">Changelog</h2>
+        <p class="body-text">Below is the release history. Older versions are listed for reference and are no longer available for download.</p>
+        <div class="changelog-table-wrap">
+          <table class="changelog-table">
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Changes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>3.8.2</td><td>Now you can quickly view your downloaded canvas quotes in your gallery. No more picture hunting in your files.</td></tr>
+              <tr><td>3.8.1</td><td>Added more font style options in Baybayin Canvas.</td></tr>
+              <tr><td>3.8.0</td><td>Added Baybayin Canvas, a feature for creating digital posts.</td></tr>
+              <tr><td>3.7.1</td><td>Improved speech recognition integration.</td></tr>
+              <tr><td>3.7.0</td><td>Added speech-to-text input and fixed minor bugs.</td></tr>
+              <tr><td>3.6.0</td><td>Added transliteration for the B18+ Baybayin variant, adjusted gameplay history limits, and improved separator formatting.</td></tr>
+              <tr><td>3.5.0</td><td>Added Firebase Cloud Messaging to improve app functionality.</td></tr>
+              <tr><td>3.4.3</td><td>Added sound effects to the full chart module, fixed Learn module submenu arrangement, and added Firebase Analytics.</td></tr>
+              <tr><td>3.3.2</td><td>Added a progress indicator and swipe gestures in Lesson: Rules, reorganized Lesson: Introduction, and fixed minor bugs.</td></tr>
+              <tr><td>3.2.1</td><td>Added a new "About App" section and fully implemented dynamic theme selection in Settings.</td></tr>
+              <tr><td>3.1.0</td><td>Background music and theme color selection is now available.</td></tr>
+              <tr><td>2.7.1</td><td>Addressed minor linguistic adjustments. Also, redesigned the settings dialog.</td></tr>
+              <tr><td>2.6.0</td><td>Addressed minor linguistic adjustments based on user feedback.</td></tr>
+              <tr><td>2.5.1</td><td>Direct link to check for latest app version.</td></tr>
+              <tr><td>2.4.1</td><td>Gameplay voice clips update and quiz scoreboard fixes.</td></tr>
+              <tr><td>2.3.0</td><td>Legacy texture update completed.</td></tr>
+              <tr><td>2.2.0</td><td>New sound manager service.</td></tr>
+              <tr><td>2.1.0</td><td>Added narration on Lesson: Baybayin Origin.</td></tr>
+              <tr><td>2.0.0</td><td>Full UI overhaul and added new features.</td></tr>
+              <tr><td>1.3.1</td><td>Fixed guide sub menus; can be pressed more than once.</td></tr>
+              <tr><td>1.3.0</td><td>Added new content in Lesson: Rules.</td></tr>
+              <tr><td>1.2.1</td><td>Game: Matching fixes and new app icon.</td></tr>
+              <tr><td>1.2.0</td><td>Added new content in Lesson: Rules.</td></tr>
+              <tr><td>1.1.0</td><td>Added toast pop-up cancel event.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Attributions -->
+      <section class="content-section">
+        <div class="section-label">Credits</div>
+        <h2 class="section-title">Attributions</h2>
+        <div class="accordion-stack" id="creditsAccordion">
+
+          <div class="accordion-item-custom">
+            <button class="collapsible-btn" type="button" data-bs-toggle="collapse" data-bs-target="#music" aria-expanded="true" aria-controls="music">Music</button>
+            <div class="collapse show" id="music" data-bs-parent="#creditsAccordion">
+              <div class="collapse-card">
+                <ul>
+                  <li><a href="https://opengameart.org/content/woodland-fantasy">Woodland Fantasy</a>, <a href="https://opengameart.org/content/curious-critters">Curious Critters</a>, and <a href="https://opengameart.org/content/pleasant-creek">Pleasant Creek</a>, licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC-BY 3.0</a> by Matthew Pablo.</li>
+                  <li><a href="https://youtu.be/wE6kqJ_uy4M?si=T0ANFkwcxmKuaSdJ">Abakada Song</a> by robie317 (used under fair use for educational purposes).</li>
+                </ul>
+                <p class="attr-note">This app uses short audio excerpts from YouTube for non-commercial educational use under fair use.</p>
+              </div>
             </div>
+          </div>
 
-            <!-- NEW VERSION -->
-            <div class="card container" style="border: none; border-radius: 10px; padding: 10px;  background-color: bisque; max-width: 630px;">
-                <div class="card-body" >
-                  <h5 class="card-title">Here's our latest Baybay!</h5>
-
-                <p class="card-text">
-                  Changes: Fixed the issue where the canvas info card slider could not be interrupted by swipe gestures. 
-                  Fixed orientation issues on certain views.
-                </p>
-                  </p><hr>
-
-                    <a href="https://mega.nz/file/nmJVDBKR#CZAGdwqdnaHLlQUxAx5kThzrFxsCtHVSxz5GDFJE-uA" class="btn btn-primary btn-md" download target="_blank" style="margin-bottom: 10px;">Download 3.8.3</a><br>
-
-                    <span class="card-text" style="color:grey;"><small class="text-body-secondary">Published Dec. 2023 | <a href="https://drive.google.com/file/d/1qh5qgvy0bs_BKlJtrOdahYZhr7QxLaOU/view?usp=sharing">Alt download link</a> </small></span>
-                    
-                  
-                </div>
+          <div class="accordion-item-custom">
+            <button class="collapsible-btn" type="button" data-bs-toggle="collapse" data-bs-target="#soundfx" aria-expanded="false" aria-controls="soundfx">Sound Effects</button>
+            <div class="collapse" id="soundfx" data-bs-parent="#creditsAccordion">
+              <div class="collapse-card">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=7N4461Y0NEo">Menu Selection Sound Effect</a> by Sound-effect-source.</li>
+                  <li><a href="https://pixabay.com/sound-effects/tap-notification-180637/">Tap Notification</a> by lucadialessandro &mdash; <a href="https://pixabay.com/license/">Pixabay Content License</a></li>
+                  <li><a href="https://opengameart.org/content/level-up-power-up-coin-get-13-sounds">Level Up Power-Up Coin Get 13 Sounds</a> by Wobbleboxx &mdash; CC0</li>
+                  <li><a href="https://opengameart.org/content/card-game-sounds">Card Game Sounds</a> by HaelDB &mdash; CC0</li>
+                </ul>
+              </div>
             </div>
+          </div>
 
-            <!-- Slideshow -->
-            <div id="carouselExampleIndicators" class="carousel slide mx-auto" data-bs-ride="carousel" style="margin-top: 15px; margin-bottom: 15px; border: 2px solid rgba(175, 114, 0, 0.541); border-radius: 15px; max-width: 630px;">
-                <div class="carousel-inner" style="padding: 5px;">
-                    <div class="carousel-item active">
-                        <img src="demo1.png" class="d-block w-100" alt="Image 1" style="border-radius: 12px;">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="demo2.png" class="d-block w-100" alt="Image 2" style="border-radius: 12px;">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="demo3.png" class="d-block w-100" alt="Image 3" style="border-radius: 12px;">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="demo4.png" class="d-block w-100" alt="Image 4" style="border-radius: 12px;">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="demo5.png" class="d-block w-100" alt="Image 5" style="border-radius: 12px;">
-                    </div>
-                </div>
+          <div class="accordion-item-custom">
+            <button class="collapsible-btn" type="button" data-bs-toggle="collapse" data-bs-target="#graphics" aria-expanded="false" aria-controls="graphics">Graphics</button>
+            <div class="collapse" id="graphics" data-bs-parent="#creditsAccordion">
+              <div class="collapse-card">
+                <ul>
+                  <li>Images and graphics created with <a href="https://www.canva.com">Canva</a></li>
+                  <li>Icons from <a href="https://icons8.com">icons8.com</a></li>
+                  <li>Image by upklyak on <a href="https://www.freepik.com/free-vector/viking-runes-alphabet-celtic-font-with-runic-signs_20873473.htm">Freepik</a> &mdash; Free Licence</li>
+                </ul>
+                <p class="attr-note">This app includes selected reference images for non-commercial educational use under fair use.</p>
+              </div>
             </div>
-            <style>
-                .carousel-item {
-                    transition: opacity 0.5s ease-in-out;
-                    opacity: 0;
-                }
-                .carousel-item.active {
-                    opacity: 1;
-                }
-            </style>
-            
+          </div>
 
-            <!-- Download Instructions -->
-            <div class="px-2 my-5 text-start">
-                <p class="font-weight-bold" >🎮 To download the newest version of the app, simply follow these steps:</p>
-
-                <ol>
-                    <li>Click the button above to begin.</li>
-                    <li>You'll be navigated to MEGA hosting interface.</li>
-                    <li>You may not be able to view the file but it is available to download. Just click the download button or open in "app" if you have it installed.</li>
-                    <li>If none of the above worked, there is an alternative download link that will direct you to Google Drive. You can also get it on <a href="https://apkpure.com/baybay/com.example.baybay">APK Pure App Store</a>.</li>
-                    <li><strong>Important:</strong> If your browser throws ads or redirect you to other site, just close or go back. The download button should only download the file.</li>
-                    <li>Finally, install the app and enjoy!</li>
-                </ol>
+          <div class="accordion-item-custom">
+            <button class="collapsible-btn" type="button" data-bs-toggle="collapse" data-bs-target="#software" aria-expanded="false" aria-controls="software">Software</button>
+            <div class="collapse" id="software" data-bs-parent="#creditsAccordion">
+              <div class="collapse-card">
+                <ul>
+                  <li>Audio generated by <a href="https://ttsreader.com/player/">TTSReader</a></li>
+                  <li><a href="https://www.narakeet.com/app/text-to-audio/?projectId=82672600-5d8d-4880-8601-fea0ce4d4aa6">Narakeet</a> text-to-speech service</li>
+                </ul>
+              </div>
             </div>
+          </div>
 
-            <!-- Privacy Policy -->
-            <div class="px-2 my-5 text-start">
-                <p class="font-weight-bold">🔎 Privacy Policy</p>
-                <p>
-                    Baybay ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy outlines how we handle information collected through our app. By using Baybay, you agree to the terms of this Privacy Policy.
-                </p>
-
-                <button class="btn btn-primary btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#policy" aria-expanded="false" aria-controls="policy" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
-                    See our Privacy Policy
-                </button>
-  
-                <div class="collapse" id="policy">
-                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
-                        <ol>
-                            <li>
-                                <strong>Data Collection</strong>
-                                <p>
-                                    Surprise! We do not collect any personal data from users. However, our app may require access to certain device functionalities to provide core features:
-                                    <ul>
-                                        <li>
-                                            <strong>Microphone: </strong> Used for voice input functionality.
-                                        </li>
-                                        <li>
-                                            <strong>Storage: </strong> Used to save user-generated content and progress.
-                                        </li>
-                                        <li>
-                                            <strong>Wi-Fi/Internet: </strong> Used optionally for fetching online content and opening external links.
-                                        </li>
-                                        <br>
-                                    </ul>
-                                    
-                                    No user data is stored on servers or shared with any third parties except for Google Firebase (described below).
-
-                                </p>
-                            </li>
-                            <li>
-                                <strong>Use of Third-Party Services</strong>
-                                <p>
-                                    We use Google Firebase for push notifications. Firebase may collect minimal data for sending notifications, such as device identifiers, but we do not directly access or store this data. For more details, refer to the
-                                    <a href="https://firebase.google.com/support/privacy/">Google Firebase Privacy Policy</a>.
-                                </p>
-                            </li>
-
-                            <li>
-                                <strong>Data Security</strong>
-                                <p>
-                                    Since we do not collect personal data, there is no sensitive information to secure. For the features requiring access to your microphone, storage, and Wi-Fi, permissions are used solely for their intended functionality.
-                                </p>
-                            </li>
-
-                            <li>
-                                <strong>User Rights</strong>
-                                <p>
-                                    As we do not collect or store personal data, there are no user rights related to data access, correction, or deletion required. However, if you have any concerns about app permissions, you can <a href="https://support.google.com/android/answer/9431959?hl=en">revoke</a> them through your device settings. 
-                                </p>
-                            </li>
-
-                            <li>
-                                <strong>Children&rsquo;s Privacy</strong>
-                                <p>
-                                    Our app does not target any specific audience, including children. However, as a learning app for Baybayin script, it can be used by individuals of all ages.
-                                </p>
-                            </li>
-
-                            <li>
-                                <strong>Policy Updates</strong>
-                                <p>
-                                    We may update this Privacy Policy occasionally to reflect changes to our app or for other operational, legal, or regulatory reasons.
-                                </p>
-                            </li>
-                        </ol>  
-                    </div>
-                </div>
+          <div class="accordion-item-custom">
+            <button class="collapsible-btn" type="button" data-bs-toggle="collapse" data-bs-target="#textmaterials" aria-expanded="false" aria-controls="textmaterials">Text Materials</button>
+            <div class="collapse" id="textmaterials" data-bs-parent="#creditsAccordion">
+              <div class="collapse-card">
+                <ul>
+                  <li><a href="https://www.mgakwentongbayan.com">Mga Kwentong Bayan</a></li>
+                  <li><a href="https://philnews.ph/2020/01/07/tula-10-halimbawa-ng-mga-tulang-pilipino-philnews/">Philippine News</a></li>
+                  <li>Texts incorporated from <a href="https://www.wikipedia.org/">Wikipedia</a></li>
+                </ul>
+              </div>
             </div>
+          </div>
 
-
-            <!-- Made for Capstone -->
-            <div class="px-2 my-5 text-start">
-                <p class="font-weight-bold">🤖 Made for Capstone Project Only</p>
-
-                <p class="pt-3">This application was developed for a capstone project and is provided as-is. The app is no longer being actively updated, so some features may be incomplete or behave differently across devices. You may encounter occasional bugs or performance issues.
-                </p>
-
-                <button class="btn btn-primary btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#teaser" aria-expanded="false" aria-controls="teaser" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
-                    Watch our Video Teaser
-                </button>
-                
-                <div class="collapse" id="teaser">
-                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <video src="app_demo_baybay.mp4" class="embed-responsive-item object-fit-contain" alt="Video Teaser Loading..." autoplay loop style="border-radius: 15px;"></video>
-                            <div class="text-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-                                <i class="fas fa-spinner fa-spin fa-3x"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <div class="accordion-item-custom">
+            <button class="collapsible-btn" type="button" data-bs-toggle="collapse" data-bs-target="#others" aria-expanded="false" aria-controls="others">Others</button>
+            <div class="collapse" id="others" data-bs-parent="#creditsAccordion">
+              <div class="collapse-card">
+                <ul>
+                  <li>Design inspiration from <a href="https://dribbble.com">Dribbble</a> and <a href="https://www.pinterest.ph">Pinterest</a></li>
+                  <li>Notification method inspired by <a href="https://youtu.be/GDxj8KTmLrI?si=SGKJggMDdGM6yezy">SNA Tech</a></li>
+                  <li>Noto Sans Tagalog font by <a href="https://copypaste.wtf/baybayin/">Mr. Brennan</a> &mdash; SIL OFL license</li>
+                  <li>Free-to-use fonts (Bayani, Chochin, Robotika, Sarimanok, etc.) by <a href="https://www.behance.net/lloydzapanta">Mr. Zapanta</a> &mdash; SIL OFL license</li>
+                </ul>
+              </div>
             </div>
-
-            
-            <!-- Changelog -->
-            <div class="px-2 my-5 text-start">
-                <p class="font-weight-bold">📅 Changelog</p>
-                <p>
-                    List of all previous app versions. Scroll down the table to see more. Please note, these versions are not available for download.
-                </p>
-            </div>
-
-            <!-- Table settings -->
-            <style>
-                .scrollable {
-                    height: 605px;
-                    overflow: auto;
-                    -ms-overflow-style: none; 
-                    scrollbar-width: none;
-                }
-
-                .scrollable::-webkit-scrollbar {
-                    display: none;
-                }
-
-                .table thead {
-                    position: sticky;
-                    top: 0;
-                    background-color: bisque;
-                }
-            </style>
-
-            <!-- Table contents-->
-            <div class="scrollable container" style="border: 2px solid rgb(175, 114, 0, 0.541); border-radius: 15px; padding: 20px; padding-top: 0px; background-color: bisque; max-width: 630px;"> 
-
-                <style>
-                    .center-text {
-                        text-align: center;
-                        /* text-wrap: nowrap; */
-                    }
-                </style>
-
-                <table class="table table-borderless">
-                    <thead style="height: 60px;">
-                        <tr>
-                            <th class="center-text">Version</th>
-                            <th>Changes</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td class="center-text">3.8.2</td>
-                            <td>Now you can quickly view your downloaded canvas qoutes in your gallery. No more picture hunting in your files.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">3.8.1</td>
-                            <td>Added more font styling options under baybayin canvas.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">3.8.0</td>
-                            <td>New baybayin canvas feature - create digital posts.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">3.7.1</td>
-                            <td>Improved Speech Recognition Integration.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">3.7.0</td>
-                            <td>Speech to Text input recognition is now available, and minor bug fixes.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">3.6.0</td>
-                            <td>Added Transliteration feature for B18 plus version of baybayin script, adjusted gameplay history cap, and minor format separator changes.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">3.5.0</td>
-                            <td>Added Firebase Cloud Messaging to improve the app functionality.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">3.4.3</td>
-                            <td>Full chart module sound effect, and Learn module submenu arrangement fixes. Added Firebase Analytics.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">3.3.2</td>
-                            <td>Added a progress indicator and swipe gesture in Lesson: Rules, re-arranged contents in Lesson: Introduction, and small bug fixes.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">3.2.1</td>
-                            <td>Added a new "About App" section and fully implemented the dynamic theme color selection in the settings dialog.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">3.1.0</td>
-                            <td>Background music and theme color selection is now available.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">2.7.1</td>
-                            <td>Addressed minor linguistic adjustments. Also, redesigned the settings dialog.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">2.6.0</td>
-                            <td>Addressed minor linguistic adjustments based on user feedback.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">2.5.1</td>
-                            <td>Direct link to check for latest app version.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">2.4.1</td>
-                            <td>Gameplay voice clips update and quiz scoreboard fixes.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">2.3.0</td>
-                            <td>Legacy texture update completed. </td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">2.2.0</td>
-                            <td>New sound manager service.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">2.1.0</td>
-                            <td>Added narration on Lesson: Baybayin Origin.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">2.0.0</td>
-                            <td>Full UI overhaul and added new features.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">1.3.1</td>
-                            <td>Fixed guide sub menus; can be press more than once.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">1.3.0</td>
-                            <td>Added new content in Lesson: Rules.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">1.2.1</td>
-                            <td>Game: Matching fixes and new app icon.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">1.2.0</td>
-                            <td>Added new content in Lesson: Rules.</td>
-                        </tr>
-
-                        <tr>
-                            <td class="center-text">1.1.0</td>
-                            <td>Added toast pop-up cancel event.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div> 
-
-
-            <!-- Purpose -->
-            <div class="px-2 my-5 text-start">
-                <p class="font-weight-bold">🎯 Purpose</p>
-            
-                <p>Learn Baybayin with an easy-to-use mobile app designed to help you, specially, young learners understand and practice this ancient Filipino script. Check out B20+, a modern version of Baybayin, and explore a variety of tools like lessons, quizzes, and fun memory games. This app is great for learning at your own pace and building skills while also improving your memory. You can connect with other Baybayin learners and discover cool art and products inspired by this rich cultural tradition. Download the app and take part in keeping Baybayin alive in a modern and exciting way.<br><br>
-                
-                    Keywords: Baybayin, Philippine culture, mobile learning, games, memory, community, heritage
-                    
-                </p>
-            </div>
-
-            <!-- Attribution -->
-            <div class="px-2 my-5 text-start">
-                <p class="font-weight-bold">🎓 Attributions</p>
-                <p>
-                    Press the button to show or hide more information.
-                </p>
-            </div>
-
-            <div class="container" style="max-width: 700px;">
-
-                <button class="btn btn-primary btn-block" type="button" data-bs-toggle="collapse" data-bs-target="#music" aria-expanded="false" aria-controls="music" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
-                  Music
-                </button>
-
-                <div class="collapse show" id="music">
-                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
-                        <ul>
-                            <li><a href="https://opengameart.org/content/woodland-fantasy">Woodland Fantasy</a>, <a href="https://opengameart.org/content/curious-critters"> Curius Critters</a>, and <a href="https://opengameart.org/content/pleasant-creek">Pleasant Creek</a>
-                            Licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC-BY 3.0</a>
-                            by Mattew Pablo</li>
-                            <li><a href="https://youtu.be/wE6kqJ_uy4M?si=T0ANFkwcxmKuaSdJ">Abakada Song</a> by robie317
-                            Licensed: Fair Use</li><br>
-            
-                            This app incorporates audio excerpts (under Introduction module) from a YouTube video for educational purposes. The use of this content is believed to be a fair use under copyright law, as it is utilized for non-commercial, educational purposes, and the amount and nature of the material used are appropriate for educational commentary.
-                        </ul>  
-                    </div>
-                </div>
-
-                <button class="btn btn-primary btn-block" type="button"     data-bs-toggle="collapse" data-bs-target="#soundfx" aria-expanded="false" aria-controls="soundfx" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
-                    Sound Effects
-                </button>
-  
-                <div class="collapse" id="soundfx">
-                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
-                        <ul>
-                            <li><a href="https://www.youtube.com/watch?v=7N4461Y0NEo">Menu Selection Sound Effect</a> by Sound-effect-source <a href="https://www.mediafire.com/file/si9vafp7eeywm67/Menu+Selection+Sound+Effect.mp3/file">Alternative download Link</a></li>
-                            <li><a href="https://pixabay.com/sound-effects/tap-notification-180637/">Tap Notification</a> by lucadialessandro Licensed under <a href="https://pixabay.com/license/">Pixabay Content License</a></li>
-                            <li><a href="https://opengameart.org/content/level-up-power-up-coin-get-13-sounds">Level Up Power-Up Coin Get 13 Sounds</a> by Wobbleboxx Licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li>
-                            <li><a href="https://opengameart.org/content/card-game-sounds">Card Game Sounds</a> by HaelDB Licensed under <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <button class="btn btn-primary btn-block" type="button"     data-bs-toggle="collapse" data-bs-target="#graphics" aria-expanded="false" aria-controls="graphics" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
-                    Graphics
-                </button>
-  
-                <div class="collapse" id="graphics">
-                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
-                        <ul>
-                            <li>Images and graphics created with <a href="https://www.canva.com">Canva</a></li>
-                            <li>Icons from <a href="https://icons8.com">icons8.com</a></li>
-                            <li>Image by upklyak on <a href="https://www.freepik.com/free-vector/viking-runes-alphabet-celtic-font-with-runic-signs_20873473.htm#query=rune%20alphabet&position=4&from_view=author&uuid=c18e0a69-1ebc-4c75-b7b9-3bd072b7b610">Freepik</a> Licensed under <a href="https://support.freepik.com/s/article/Attribution-How-when-and-where-FI?language=en_US">Free Licence</a></li>
-                            <br>
-            
-                            This app includes images (under Arts and Crafts module) sourced from public Facebook groups and online searches for educational purposes. We believe this usage constitutes fair use under copyright law, as the images are employed for non-commercial, educational purposes, and the amount and nature of the material used are suitable for educational commentary.
-                        </ul>
-                    </div>
-                </div>
-
-                <button class="btn btn-primary btn-block" type="button"     data-bs-toggle="collapse" data-bs-target="#software" aria-expanded="false" aria-controls="software" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
-                    Software
-                </button>
-  
-                <div class="collapse" id="software">
-                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
-                        <ul>
-                            <li> Audio (under Baybayin script origin) generated by the text-to-speech reader website <a href="https://ttsreader.com/player/">TTSReader</a>. For more information, please visit https://ttsreader.com/player/</li>
-                            <li> <a href="https://www.narakeet.com/app/text-to-audio/?projectId=82672600-5d8d-4880-8601-fea0ce4d4aa6">Narakeet </a>Text to Speech Online</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <button class="btn btn-primary btn-block" type="button"     data-bs-toggle="collapse" data-bs-target="#textmaterials" aria-expanded="false" aria-controls="textmaterials" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
-                    Text Materials
-                </button>
-  
-                <div class="collapse" id="textmaterials">
-                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
-                        <ul>
-                            <li><a href="https://www.mgakwentongbayan.com">Mga Kwentong Bayan</a></li>
-                            <li><a href="https://philnews.ph/2020/01/07/tula-10-halimbawa-ng-mga-tulang-pilipino-philnews/">Philippine News</a></li>
-                            <li>This application incorporated texts from <a href="https://www.wikipedia.org/">Wikipedia</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <button class="btn btn-primary btn-block" type="button"     data-bs-toggle="collapse" data-bs-target="#others" aria-expanded="false" aria-controls="others" style="background-color:darksalmon; border-color:bisque; margin-bottom: 5px; outline: none; box-shadow: none;">
-                    Others
-                </button>
-  
-                <div class="collapse" id="others">
-                    <div class="card card-body" style="margin-top: 10px; margin-bottom: 10px; background-color: bisque;">
-                        <ul>
-                            <li> Design Inspiration from <a href="https://dribbble.com">Dribbble</a> and <a href="https://www.pinterest.ph">Pinterest</a></li>
-                            <li>Notification method by<a href="https://youtu.be/GDxj8KTmLrI?si=SGKJggMDdGM6yezy"> SNA Tech</a></li>
-                            <li>Noto Sans Tagalog font developed by <a href="https://copypaste.wtf/baybayin/">Mr. Brennan</a>, SIL OFL license</li>
-                            <li>Free to use fonts (Bayani, Chochin, Robotika, Sarimanok, etc.) developed by <a href="https://www.behance.net/lloydzapanta">Mr. Zapanta</a>, SIL OFL license</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
+          </div>
 
         </div>
+      </section>
 
+    </main>
 
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-script">&#x170A;&#x170C;&#x1714;&#x170A;&#x170C;&#x1714;</div>
+      <p class="footer-title">Baybay</p>
+      <p class="footer-sub">Modern Baybayin Learning App &nbsp;&middot;&nbsp; Capstone Project &nbsp;&middot;&nbsp; Free for All</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>

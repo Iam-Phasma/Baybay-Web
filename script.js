@@ -1,38 +1,46 @@
-document.oncontextmenu = () => {
-  //alert("The codes are simple enough to be hidden :)");
-  return false;
-};
-
-document.onkeydown = (e) => {
-  // Prevent F12 key
-  if (e.key == "F12") {
-    //alert("The codes are simple enough to be hidden :)");
-    return false;
+// Alpha scramble animation
+// ===== THEME TOGGLE =====
+(function () {
+  var root = document.documentElement;
+  var saved = localStorage.getItem('baybay-theme');
+  if (saved === 'dark' || saved === 'light') {
+    root.setAttribute('data-theme', saved);
   }
 
-  // Prevent showing page source by ctrl U
-  if (e.ctrlKey && e.key == "u") {
-    //alert("The codes are simple enough to be hidden :)");
-    return false;
+  function getEffectiveTheme() {
+    var attr = root.getAttribute('data-theme');
+    if (attr === 'dark' || attr === 'light') return attr;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
-  // Prevent copying from the page
-  if (e.ctrlKey && e.key == "c") {
-    //alert("Hello, there's nothing to copy here :)");
-    return false;
-  }
+  document.addEventListener('DOMContentLoaded', function () {
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
 
-  // Prevent pasting on the page
-  if (e.ctrlKey && e.key == "v") {
-    //alert("Hello, there's no where you can paste it here :)");
-    return false;
-  }
-};
+    function sync() {
+      btn.setAttribute('data-current', getEffectiveTheme());
+    }
 
-//For ALPHA animation
+    sync();
+
+    btn.addEventListener('click', function () {
+      var next = getEffectiveTheme() === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('baybay-theme', next);
+      sync();
+    });
+
+    // Also react if OS preference changes while page is open and no explicit choice
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function () {
+      if (!localStorage.getItem('baybay-theme')) sync();
+    });
+  });
+}());
+
+// ===== ALPHA SCRAMBLE ANIMATION =====
 document.addEventListener("DOMContentLoaded", function () {
   const alphaAnimation = document.getElementById("alphaAnimation");
-  const word = "Release Preview";
+  const word = "Current Release";
   let counter = 0;
   let scramble = setInterval(() => {
     let randomText = Math.random().toString(36).substring(7).toUpperCase();
