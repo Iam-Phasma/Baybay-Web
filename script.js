@@ -98,3 +98,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }, 70);
 });
+
+// ===== TEASER LOAD VISIBILITY =====
+document.addEventListener('DOMContentLoaded', function () {
+  var teaserToggle = document.getElementById('teaserToggle');
+  var teaserVideo = document.getElementById('teaserVideo');
+
+  if (!teaserToggle || !teaserVideo) return;
+
+  function showTeaserToggle() {
+    teaserToggle.hidden = false;
+  }
+
+  if (teaserVideo.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+    showTeaserToggle();
+    return;
+  }
+
+  teaserVideo.addEventListener('loadeddata', showTeaserToggle, { once: true });
+  teaserVideo.addEventListener('canplay', showTeaserToggle, { once: true });
+});
