@@ -1,4 +1,6 @@
-// Alpha scramble animation
+// ===== DOWNLOAD FALLBACK LINKS =====
+// Primary download is R2 (direct href). Fallback links are shown below the button.
+
 // ===== THEME TOGGLE =====
 (function () {
   var root = document.documentElement;
