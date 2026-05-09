@@ -1,6 +1,6 @@
-# Baybay — Baybayin Learning App Landing Page
+# Baybay - Baybayin Learning App Landing Page
 
-A heritage-inspired landing page for **Baybay**, a free Android application dedicated to learning and practicing Baybayin—the ancient Filipino script—through interactive lessons, quizzes, transliteration tools, and memory games.
+A heritage-inspired landing page for **Baybay**, a free Android application dedicated to learning and practicing Baybayin-the ancient Filipino script-through interactive lessons, quizzes, transliteration tools, and memory games.
 
 Open: https://baybay-release-web-app.pages.dev/
 
